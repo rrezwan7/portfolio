@@ -1,10 +1,10 @@
-$primary-color: #272727;
+$primary-color:#272727;
 $secondary-color:#ff652f;
 
 * {
-    box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 @mixin transition-ease {
@@ -19,5 +19,23 @@ $secondary-color:#ff652f;
 
     @else {
         @return #fff;
+    }
+}
+
+@mixin media-md {
+    @media screen and (min-width:768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content;
     }
 }
